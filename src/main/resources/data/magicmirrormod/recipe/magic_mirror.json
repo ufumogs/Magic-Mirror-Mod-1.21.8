@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "G": "minecraft:glass",
-    "D": "minecraft:diamond"
+    "D": "minecraft:diamond_block"
   },
   "pattern": [
     "GGG",

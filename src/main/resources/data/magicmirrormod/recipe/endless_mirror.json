@@ -4,12 +4,12 @@
   "key": {
     "N": "minecraft:nether_star",
     "M": "magicmirrormod:magic_mirror",
-    "D": "minecraft:diamond"
+    "O": "minecraft:obsidian"
   },
   "pattern": [
-    "DND",
-    "DMD",
-    "DDD"
+    "ONO",
+    "OMO",
+    "OOO"
   ],
   "result": {
     "count": 1,
