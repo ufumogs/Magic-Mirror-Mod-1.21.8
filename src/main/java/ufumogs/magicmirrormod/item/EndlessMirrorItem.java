@@ -27,8 +27,8 @@ public class EndlessMirrorItem extends Item {
         ServerWorld sw = (ServerWorld) world;
 
         sw.playSound(null, player.getBlockPos(),
-                SoundEvents.BLOCK_PORTAL_TRAVEL,
-                SoundCategory.PLAYERS, 0.5f, 4.0f);
+                SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT,
+                SoundCategory.PLAYERS, 2.0f, 1.0f);
 
         // Try bed/anchor first
         TeleportTarget target = player.getRespawnTarget(true, TeleportTarget.NO_OP);
