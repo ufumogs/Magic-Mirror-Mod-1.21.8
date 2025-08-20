@@ -29,6 +29,10 @@ public class MagicMirrorItem extends Item {
 
         ItemStack stack = user.getStackInHand(hand);
 
+        sw.playSound(null, player.getBlockPos(),
+                SoundEvents.BLOCK_PORTAL_TRAVEL,
+                SoundCategory.PLAYERS, 0.5f, 4.0f);
+
         // Try bed/anchor first
         TeleportTarget target = player.getRespawnTarget(true, TeleportTarget.NO_OP);
         if (target != null && !target.missingRespawnBlock()) {
@@ -43,15 +47,6 @@ public class MagicMirrorItem extends Item {
             );
             player.teleportTo(worldSpawnTarget);
         }
-
-        sw.playSound(
-                null,
-                player.getX(), player.getY(), player.getZ(),
-                SoundEvents.ENTITY_ENDERMAN_TELEPORT,   // the sound
-                SoundCategory.PLAYERS,                  // category
-                1.0F,                                   // volume
-                1.0F                                    // pitch
-        );
 
         // Damage after successful use (skip in Creative)
         if (!user.getAbilities().creativeMode) {

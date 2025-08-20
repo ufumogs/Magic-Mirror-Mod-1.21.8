@@ -26,6 +26,10 @@ public class EndlessMirrorItem extends Item {
         ServerPlayerEntity player = (ServerPlayerEntity) user;
         ServerWorld sw = (ServerWorld) world;
 
+        sw.playSound(null, player.getBlockPos(),
+                SoundEvents.BLOCK_PORTAL_TRAVEL,
+                SoundCategory.PLAYERS, 0.5f, 4.0f);
+
         // Try bed/anchor first
         TeleportTarget target = player.getRespawnTarget(true, TeleportTarget.NO_OP);
         if (target != null && !target.missingRespawnBlock()) {
@@ -40,15 +44,6 @@ public class EndlessMirrorItem extends Item {
             );
             player.teleportTo(worldSpawnTarget);
         }
-
-        sw.playSound(
-                null,
-                player.getX(), player.getY(), player.getZ(),
-                SoundEvents.ENTITY_ENDERMAN_TELEPORT,   // the sound
-                SoundCategory.PLAYERS,                  // category
-                1.0F,                                   // volume
-                1.0F                                    // pitch
-        );
 
         // No durability, infinite uses.
         return ActionResult.SUCCESS;
