@@ -5,6 +5,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -41,6 +43,15 @@ public class MagicMirrorItem extends Item {
             );
             player.teleportTo(worldSpawnTarget);
         }
+
+        sw.playSound(
+                null,
+                player.getX(), player.getY(), player.getZ(),
+                SoundEvents.ENTITY_ENDERMAN_TELEPORT,   // the sound
+                SoundCategory.PLAYERS,                  // category
+                1.0F,                                   // volume
+                1.0F                                    // pitch
+        );
 
         // Damage after successful use (skip in Creative)
         if (!user.getAbilities().creativeMode) {
