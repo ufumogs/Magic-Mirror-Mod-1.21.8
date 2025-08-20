@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "magicmirrormod",
 	"version": "${version}",
-	"name": "Magic Mirror Mod",
-	"description": "Magic Mirror Mod From Terraria",
+	"name": "Magic Mirror",
+	"description": "Adds the Magic Mirror and Endless Mirror — teleportation items that return players to their bed or world spawn.",
 	"authors": [
 		"ufumogs"
 	],
