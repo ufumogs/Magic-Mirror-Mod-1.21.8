@@ -11,8 +11,8 @@ import net.minecraft.util.Identifier;
 import ufumogs.magicmirrormod.MagicMirrorMod;
 
 public class ModItems {
-    public static final Item MAGIC_MIRROR = registerItem("magic_mirror", new Item(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MagicMirrorMod.MOD_ID,"magic_mirror")))));
-    public static final Item ENDLESS_MIRROR = registerItem("endless_mirror", new Item(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MagicMirrorMod.MOD_ID,"endless_mirror")))));
+    public static final Item MAGIC_MIRROR = registerItem("magic_mirror", new MagicMirrorItem(new Item.Settings().maxDamage(10).maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MagicMirrorMod.MOD_ID,"magic_mirror")))));
+    public static final Item ENDLESS_MIRROR = registerItem("endless_mirror", new EndlessMirrorItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MagicMirrorMod.MOD_ID,"endless_mirror")))));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(MagicMirrorMod.MOD_ID, name), item);
