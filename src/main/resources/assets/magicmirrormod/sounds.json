@@ -1,0 +1,7 @@
+{
+  "teleport": {
+    "sounds": [
+      { "name": "magicmirrormod:teleport", "stream": false }
+    ]
+  }
+}

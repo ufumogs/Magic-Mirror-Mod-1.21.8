@@ -16,6 +16,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
+import ufumogs.magicmirrormod.MagicMirrorMod;
 
 public class MagicMirrorItem extends Item {
     public MagicMirrorItem(Settings settings) {
@@ -62,8 +63,8 @@ public class MagicMirrorItem extends Item {
             }
 
             sw.playSound(null, player.getBlockPos(),
-                    SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT,
-                    SoundCategory.PLAYERS, 2.0f, 1.0f);
+                    MagicMirrorMod.TELEPORT_SOUND,
+                    SoundCategory.PLAYERS, 1.0f, 1.0f);
 
             if (!player.getAbilities().creativeMode) {
                 stack.damage(1, player, player.getMainHandStack() == stack ? Hand.MAIN_HAND : Hand.OFF_HAND);
