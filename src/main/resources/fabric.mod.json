@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/ufumogs/Magic-Mirror-Mod-1.21.8"
 	},
 	"license": "MIT",
 	"icon": "assets/magicmirrormod/icon.png",
