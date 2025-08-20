@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": "minecraft:nether_star",
+    "M": "magicmirrormod:magic_mirror",
+    "D": "minecraft:diamond"
+  },
+  "pattern": [
+    "DND",
+    "DMD",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicmirrormod:endless_mirror"
+  }
+}
