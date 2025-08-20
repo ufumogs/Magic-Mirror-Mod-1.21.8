@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "magicmirrormod",
+	"version": "${version}",
+	"name": "Magic Mirror Mod",
+	"description": "Magic Mirror Mod From Terraria",
+	"authors": [
+		"ufumogs"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/magicmirrormod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ufumogs.magicmirrormod.MagicMirrorMod"
+		],
+		"fabric-datagen": [
+			"ufumogs.magicmirrormod.MagicMirrorModDataGenerator"
+		],
+		"client": [
+			"ufumogs.magicmirrormod.MagicMirrorModClient"
+		]
+	},
+	"mixins": [
+		"magicmirrormod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
